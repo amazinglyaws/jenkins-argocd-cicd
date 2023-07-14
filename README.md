@@ -3,6 +3,9 @@
 
 **Tools used :** _VS Code, Git/GitHub, Jenkins, AWS EC2, Shell (Unix), Python, Docker, SonarQube, K8s, ArgoCD_
 
+## Architecture (high level)
+![Alt text](image.png)
+
 ## Pre-requisites
 1. Install and configure Jenkins server on **AWS EC2** instance (use t2.medium and terminate to avoid any recurring charges)
 2. Install and configure **Docker** on the EC2 Jenkins Server 
