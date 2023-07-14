@@ -18,8 +18,29 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 
+-- Configure a Sonar Server locally --
+sudo apt install unzip
+sudo adduser sonarqube    -- hint : password is sonarqube
+sudo su - sonarqube
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+unzip *
+chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+./sonar.sh start
+
+
+-- Build the Docker Image --
+
+docker build -t ultimate-cicd-pipeline:v1 .
+docker run -d -p 8010:8080 -t ultimate-cicd-pipeline:v1
 
 NOTE:
-jenkins administrator password : fea52e0c08224941b8ff50e232cc6a00
-jenkins url : http://44.212.73.191:8080/    (EC2 instance public ip)
 Git Accesss Toke (gittoken) - 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
+Jenkins url : http://44.212.73.191:8080/    (EC2 instance public ip)
+    jenkins administrator uname/pwd : admin/fea52e0c08224941b8ff50e232cc6a00
+
+Sonarque url : http://44.212.73.191:9000/  (EC2 instance public ip)
+    sonarqube administrator uname/pwd : admin/admin123
+
+Access the dockerized application : http://<ip-address>:8010

@@ -7,9 +7,9 @@
 ![Alt text](image.png)
 
 ## Pre-requisites
-1. Install and configure Jenkins server on **AWS EC2** instance (use t2.medium and terminate to avoid any recurring charges)
-2. Install and configure **Docker** on the EC2 Jenkins Server 
-3. Install and configure **SonarQube** on the EC2 Jenkins Server
+1. Install and configure Jenkins server on **AWS EC2** instance (use t2.medium and terminate to avoid any recurring charges) - Done
+2. Install and configure **SonarQube** on the EC2 Jenkins Server - Done
+3. Install and configure **Docker** on the EC2 Jenkins Server 
 4. Setup a **minikube** Kubernetes cluster on AWS EC2 instance (use t2.medium)
 * TODO: Use userdata for setting up the jenkins, sonarqube and docker in the AWS Ec2 instance for reuse
 * TODO: Add scripts
