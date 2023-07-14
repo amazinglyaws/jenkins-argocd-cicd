@@ -22,4 +22,4 @@ sudo apt-get install jenkins
 NOTE:
 jenkins administrator password : fea52e0c08224941b8ff50e232cc6a00
 jenkins url : http://44.212.73.191:8080/    (EC2 instance public ip)
-Gipt Accesss Toke (gittoken) - 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
+Git Accesss Toke (gittoken) - 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
